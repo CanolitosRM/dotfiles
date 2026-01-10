@@ -6,7 +6,7 @@ Config {
     , fgColor       = "#f4b8e4"
     , borderColor   = "#fab387"
     , position      = TopHM 40 30 30 16 0
-    , alpha         = 220    -- Valor de 0 a 255
+    , alpha         = 150    -- Valor de 0 15055
     , commands  = [ Run Cpu
                     [ "-L", "3"
                     , "-H", "50"
