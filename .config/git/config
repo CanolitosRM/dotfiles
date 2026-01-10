@@ -1,0 +1,22 @@
+# ===========================================================================
+# FILE: config
+# PATH: ~/.config/git/config
+# DESCRIPTION: Configuración global de Git para el Ingeniero Canolitos
+# ===========================================================================
+
+[user]
+    name = Canolitos
+    email = canolitos@outlook.com
+
+[core]
+    editor = nvim
+    whitespace = fix,space-before-tab,tab-in-indent,trailing-space
+
+[init]
+    defaultBranch = main
+
+[color]
+    ui = auto
+
+[alias]
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
