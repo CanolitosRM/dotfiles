@@ -1,0 +1,38 @@
+[window]
+# Transparencia espiritual (ajusta de 0.0 a 1.0)
+opacity = 1
+blur = true # Esto funciona de maravilla con tu Picom
+
+[window.padding]
+# Un poco de aire para que el texto no toque los bordes redondeados
+x = 15
+y = 15
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+size = 11.0
+
+[colors.primary]
+# Basado en tu azul océano profundo
+background = "#11111b"
+foreground = "#e0f2f1"
+
+[colors.cursor]
+# El cursor será el "sol" amarillo de tu XMobar
+text = "#002b36"
+cursor = "#efd469"
+
+[colors.normal]
+black   = "#073642"
+red     = "#dc322f"
+green   = "#859900"
+yellow  = "#b58900"
+blue    = "#268bd2"
+magenta = "#d33682"
+cyan    = "#2aa198"
+white   = "#eee8d5"
+
+[terminal.shell]
+# Asegúrate de que use tu shell favorita (bash o zsh)
+program = "/bin/zsh"
