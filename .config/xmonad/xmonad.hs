@@ -106,7 +106,9 @@ myLayout = avoidStruts (tiled ||| Grid ||| smartBorders Full)
 myAdditionalKeys :: [(String, X ())]
 myAdditionalKeys =
     [ ("M-i", spawn "firefox")
-    , ("M-f", sendMessage ToggleStruts)
+    --, ("M-f", sendMessage ToggleStruts)
+    , ("M-f", spawn "pkill xmobar")
+    , ("M-S-f", spawn "pgrep xmobar >/dev/null || xmobar --dock ~/.config/xmonad/xmobarrc1")
     , ("M-S-b", withFocused $ windows . W.sink)  -- Floating de vuelta al sink
     -- AUDIO (pactl)
     , ("<XF86AudioMute>",          spawn "pamixer -t")
@@ -146,7 +148,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 -------------------------------------------------------------------------------
 -- XMOBAR CONFIG (Pretty Printing)
 -------------------------------------------------------------------------------
-myXMobar1 = "xmobar --dock ~/.config/xmonad/xmobarrc1"
+myXMobar1 = "xmobar ~/.config/xmonad/xmobarrc1"
 
 mainXmobarPP :: PP
 mainXmobarPP = def
