@@ -1,27 +1,27 @@
 Config {
       overrideRedirect = False
     , lowerOnStart  = True
-    , font          = "NotoSans Nerd Font Propo 13"
+    , font          = "Ubuntu 17"
     , bgColor       = "#303446"
     , fgColor       = "#f4b8e4"
     , borderColor   = "#fab387"
-    , position      = TopHM 40 30 30 16 0
+    , position      = TopHM 60 70 70 16 0
     , alpha         = 150    -- Valor de 0 15055
     , commands  = [ Run Cpu
-                    [ "-L", "3"
+                    [ "-L", "10"
                     , "-H", "50"
                     , "--high"  , "#f38ba8"
-                    , "--normal", "#f9e2af"
+                    , "--normal", "#89b4fa"
                     ] 10
                   , Run Memory ["--template" , "Mem: <usedratio>%"] 10
                   , Run Swap [] 10
                   , Run Date "%a %Y-%m-%d <fc=#89b4fa>%H:%M</fc>" "date" 10
                   , Run XMonadLog
-                  , Run Com "pamixer" [ "--get-volume-human" ] "vol" 10
+                  , Run Com "pamixer" [ "--get-volume-human" ] "vol" 1
                   ]
     , sepChar   = "%"
     , alignSep  = "}{"
-    , template = "   %XMonadLog% } <fc=#fab387>󰃰  </fc> %date% { <fc=#fab387>󰕾 </fc> %vol% <fc=#cba6f7> 󰇙 </fc> <fc=#fab387> </fc> %cpu% <fc=#cba6f7> 󰇙 </fc> <fc=#fab387> </fc> %memory%   "
+    , template = "   %XMonadLog% } <fc=#fab387>󰃰  </fc> %date% { <fc=#fab387>󰕾 </fc> %vol% <fc=#cba6f7>  󰇙  </fc> <fc=#fab387> </fc> %cpu% <fc=#cba6f7>  󰇙  </fc> <fc=#fab387> </fc> %memory%   "
 }
 
 -- pink                = "#f4b8e4"
