@@ -7,7 +7,6 @@
 [user]
     name = Canolitos
     email = canolitos@outlook.com
-	signingkey = 5725FC4259E4D6FA
 
 [core]
     editor = nvim
@@ -23,4 +22,3 @@
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 
 [commit]
-	gpgsign = true
