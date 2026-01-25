@@ -11,8 +11,7 @@ return {
     config = function()
         require("lualine").setup({
             options = {
-                -- El sabor de Catppuccin se aplica automáticamente aquí
-                theme = "auto",
+                theme = "dracula",
                 -- Separadores redondeados para esa vibra "cozy" y suave
                 component_separators = { left = '∘', right = '∘' },
                 section_separators = { left = '', right = ''},

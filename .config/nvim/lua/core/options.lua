@@ -37,3 +37,10 @@ end
 
 vim.opt.undodir = undo_path
 vim.opt.undofile = true
+
+
+-- --------------------------------------------------------------------------
+-- Ajustes de división de la pantalla
+-- --------------------------------------------------------------------------
+-- Los splits horizontales se abren abajo
+vim.opt.splitbelow = true

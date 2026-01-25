@@ -28,7 +28,7 @@ return {
                 -- frappe    > oscuro suave
                 -- macchiato > oscuro balanceado
                 -- mocha     > oscuro profundo
-                flavour = "mocha",
+                flavour = "latte",
 
                 -- Transparencia falsa
                 transparent_background = true,
