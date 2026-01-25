@@ -78,14 +78,14 @@ myStartupHook = do
     spawnOnce "pipewire"
     spawnOnce "nitrogen --restore"
     spawnOnce "picom"
-    spawnOnce "xrdb -merge ~/.config/X11/Xresources"
-    spawnOnce "xsetroot -cursor_name left_ptr"
+    spawnOnce "lxqt-policykit-agent"
 
 myManageHook = composeAll
-    [ isDialog --> doRectFloat (W.RationalRect 0.3 0.3 0.4 0.4)
+    [ isDialog --> doFloat
     , isInProperty "_NET_WM_WINDOW_TYPE" "_NET_WM_WINDOW_TYPE_NOTIFICATION"
         --> doRectFloat (W.RationalRect 0.35 0.35 0.3 0.2)
     , className =? "Gimp" --> doFloat
+    , className =? "gnome-calculator" --> doCenterFloat
     , className =? "zenity" --> doRectFloat (W.RationalRect 0.3 0.3 0.4 0.4)
     -- Agrega aquí más reglas de ventanas si lo necesitas
     ]
@@ -138,6 +138,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_period), sendMessage (IncMasterN (-1)))
     , ((modm,               xK_q     ), spawn "xmonad --recompile && xmonad --restart")
     , ((modm,               xK_z     ), warpToWindow (1/2) (1/2))
+    , ((modm,               xK_e     ), spawn "rofi -show emoji -modes emoji -theme ~/.config/rofi/material.rasi")
     ]
     ++
     -- Mod-1..9 para cambiar workspaces
