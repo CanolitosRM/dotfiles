@@ -24,8 +24,8 @@ draw_bold_text_with_bright_colors = true
 
 [general]
 import = [
-    #"~/.config/alacritty/canolitos.toml"
+    "~/.config/alacritty/canolitos.toml"
     #"~/.config/alacritty/catppuccin-mocha.toml",
     #"~/.config/alacritty/tokyo-night-storm.toml",
-    "~/.config/alacritty/dracula.toml",
+    #"~/.config/alacritty/dracula.toml",
 ]
